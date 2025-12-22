@@ -8,12 +8,14 @@ const deleteBtn = document.querySelector(".delete");
 
 function createSliderItem() {
   const blockItem = document.createElement("div");
+  blockItem.textContent = `Блок № ${sliderWrapper.children.length + 1}`;
   blockItem.classList.add("slider__item");
   sliderWrapper.appendChild(blockItem);
   return blockItem;
 }
 
 function createSlide() {
+  deleteSlide();
   let valueInput = parseInt(inputValue.value);
   console.log("Создаю слайдов:", valueInput);
   for (let i = 0; i < valueInput; i++) {
@@ -52,5 +54,4 @@ btnPrev.addEventListener("click", function () {
 
   sliderWrapper.scrollLeft -= scrollLength;
 });
-deleteBtn.addEventListener("click", deleteSlide);
 btnAgree.addEventListener("click", createSlide);
