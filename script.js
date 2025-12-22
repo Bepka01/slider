@@ -4,11 +4,16 @@ const inputSlide = document.querySelector(".slide");
 const btnAgree = document.querySelector(".agree");
 const btnNext = document.querySelector(".next");
 const btnPrev = document.querySelector(".prev");
-const deleteBtn = document.querySelector(".delete");
 
 function createSliderItem() {
   const blockItem = document.createElement("div");
-  blockItem.textContent = `Блок № ${sliderWrapper.children.length + 1}`;
+  const index = ` ${sliderWrapper.children.length + 1}`;
+  blockItem.innerHTML = `<div class="card text-bg-secondary mb-3" style="max-width: 18rem;">
+  <div class="card-header">Блок № ${index}/</div>
+  <div class="card-body">
+    <h5 class="card-title">Secondary Заголовок карточки</h5>
+    <p class="card-text">Несколько быстрых примеров текста для построения на основе Заголовок карточки и составления основной части содержимого карточки.</p>
+  </div>`;
   blockItem.classList.add("slider__item");
   sliderWrapper.appendChild(blockItem);
   return blockItem;
@@ -52,3 +57,7 @@ btnPrev.addEventListener("click", function () {
   scrollSlide(-1);
 });
 btnAgree.addEventListener("click", createSlide);
+console.log(btnAgree);
+btnAgree.addEventListener("click", function () {
+  console.log("Клик");
+});

@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
     <script src="script.js" defer></script>
     <title>Document</title>
   </head>
@@ -11,16 +19,38 @@
     <main>
       <div class="slider__container">
         <div class="input__container">
-          <p>Кол-во слайдов</p>
-          <input class="input value" type="text" />
-          <p>Сколько слайдов вращать</p>
-          <input class="input slide" type="text" />
-          <button class="btn agree">Подтвердить</button>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Кол-во карточек</label
+            >
+            <input
+              type="email"
+              class="form-control input value"
+              id="exampleFormControlInput1"
+              placeholder="Кол-во карточек"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label"
+              >Кол-во карточек</label
+            >
+            <input
+              type="email"
+              class="form-control input slide"
+              id="exampleFormControlInput1"
+              placeholder="Кол-во свапа"
+            />
+          </div>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button class="agree btn btn-primary me-md-2" type="button">
+              Подтвердить
+            </button>
+          </div>
         </div>
         <div class="slider__block"></div>
         <div class="btn__group">
-          <button class="btn prev">Назад</button>
-          <button class="btn next">Вперед</button>
+          <button type="button" class="btn btn-primary prev">Назад</button>
+          <button type="button" class="btn btn-primary next">Вперед</button>
         </div>
       </div>
     </main>
